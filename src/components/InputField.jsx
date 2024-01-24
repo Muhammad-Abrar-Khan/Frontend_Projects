@@ -1,16 +1,22 @@
-/* eslint-disable react/prop-types */
-
-
 const InputField = ({ type, placeholder, value, onChange }) => {
+  const customStyle = {
+    borderColor: 'blue-500',
+    color: '#3d434a',
+    backgroundColor: '#F3F3FF',
+  };
+
   return (
-    <input
-      type={type}
-      placeholder={placeholder}
-      value={value}
-      onChange={onChange}
-      className="border border-gray-300 rounded px-2 py-1"
-    />
+    <div>
+      <input
+        type={type}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        className="border-dotted border w-full h-10 rounded px-2 py-1" // Change the background color class here
+        style={customStyle}
+      />
+    </div>
   );
 };
 
-export default InputField;  // Ensure there is a default export
+export default InputField;

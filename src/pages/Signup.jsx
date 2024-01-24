@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import InputField from '../components/InputField';
 import Button from '../components/Button';
+import MakZoneImage from '../assets/images/MakZone.png'; 
 
 const Signup = () => {
   const [firstName, setFirstName] = useState('');
@@ -13,13 +14,15 @@ const Signup = () => {
   const handleSignup = (e) => {
     e.preventDefault();
 
-    console.log(firstName, lastName, email, password);
+    // console.log(firstName, lastName, email, password);
 
     navigate('/dashboard');
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <img src={MakZoneImage} alt="MakZone" />
+
       <div className="px-8 py-6 mt-4 text-left bg-white shadow-lg">
         <h3 className="text-2xl font-bold text-center">Create an account</h3>
         <form onSubmit={handleSignup}>
